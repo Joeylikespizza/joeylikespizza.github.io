@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+@import url("fontstuff.css");
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    transform: translate(0, 40%);
+}
+
+.top-bar {
+    background-color: black;
+    height: 125px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Button STUFF */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.box {
+    flex: 1;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.box:hover {
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+/* Two-column layout for REQUIRMENT;JEF;AJWEF;OAIWJEF;OAIJWE;FOJAW;EFAW */
+.container {
+    display: flex;
+    margin-top: 140px;
+    flex: 1;
+}
+
+/* I got left i got right watchu want*/
+.left-section,
+.right-section {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+/* BLACK LINE OF DEATH */
+.separator {
+    width: 2px;
+    background-color: black;
+}
+
+/* Footer stuff stinky */
+.footer {
+    background-color: rgba(128, 128, 128, 0.582);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* Font styles */
+a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* MORE IMAGES*/
+.dpaImage {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    height: auto;
+}
+
+.oakwoodImage {
+    display: block;
+    margin: 40px 20px 0 0;
+    width: 20%;
+    height: auto;
+    padding-right: 10%;
+    padding-left: 15%;
+}
+
+/* Clear the freaking floats bercause i need this for some reason. chatgpt saved me right there. */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* stupid style thingy */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        margin-top: 125px;
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .box {
+        margin: 0 5px;
+        height: auto;
+    }
+
+    .separator {
+        display: none;
+    }
+}

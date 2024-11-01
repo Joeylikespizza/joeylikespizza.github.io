@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/* STUPID VIEWPORT THINGY */
+@media screen and (max-width: 1000px) {
+    .buttons {
+        flex-direction: row;
+        position: static;
+        padding: 20px 0;
+    }
+
+    .box {
+        width: 20%;
+        margin: 0 5px;
+        height: 30px;
+    }
+
+    .section-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-image {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .section-text {
+        max-width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .box {
+        height: 25px;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    transform: translate(0, 40%);
+    margin-bottom: 40px;
+}
+
+.h1text1,
+.h1text2,
+.h1text3 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    text-shadow: 6px 3px 4px rgba(0, 0, 0, 0.219);
+}
+
+.top-bar {
+    background-color: black;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    flex-wrap: nowrap;
+}
+
+.box {
+    flex: 1;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.box:hover {
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+.content {
+    padding-top: 160px;
+}
+
+/* clarifies the different sections, my brain hurts */
+.section1,
+.section2,
+.section3 {
+    padding: 40px 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+}
+
+.section-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.section-image,
+.section-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 10px 10px 50px;
+}
+
+.section-text {
+    text-align: left;
+}
+
+/* Footer  ew */
+.footer {
+    background-color: rgba(128, 128, 128, 0.582);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.footer-text {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.section-text a {
+    text-decoration: none;
+    display: block;
+    padding: 2px;
+}
+
+.section-text a:hover {
+    -webkit-text-fill-color: rgb(77, 77, 77);
+}
+
+/* More font */
+a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
